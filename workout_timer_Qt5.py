@@ -73,6 +73,17 @@ class WorkoutTimer:
                 self.current_stage = 'Work ==>'
                 self.current_time = self.work_duration
 
+    def switch_stage(self):
+        """
+        Switches between the 'Work ==>' and 'Rest ==>' stages.
+        """
+        if self.current_stage == 'Work ==>':
+            self.current_stage = 'Rest ==>'
+            self.current_time = self.rest_duration
+        else:
+            self.current_stage = 'Work ==>'
+            self.current_time = self.work_duration
+
 
 class Interface(QTabWidget):
     """Interface class for the workout timer."""
